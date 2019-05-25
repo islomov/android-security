@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#171c20"
+        app:titleTextAppearance="@style/MainTheme.Toolbar.Title">
+        
+        <RelativeLayout
+            android:id="@+id/rlChangeGeo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <TextView
+                android:id="@+id/tlbChooseCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/din_pro_cond_bd"
+                android:lineSpacingExtra="-2sp"
+                android:gravity="center"
+                android:text="@string/cancel"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/din_pro_cond_bd"
+                android:textColor="@color/white"
+                android:lineSpacingExtra="-3sp"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:text="@string/change_geo"/>
+
+            <TextView
+                android:id="@+id/tlbChooseApply"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:fontFamily="@font/din_pro_cond_bd"
+                android:lineSpacingExtra="-2sp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:text="@string/ready"/>
+            
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    
+    <TextView
+        android:id="@+id/tvChangeGeoLatLng"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/mainBlack"
+        android:text="234234234, 234234234"
+        android:gravity="center"
+        android:fontFamily="@font/proxnova_sbd"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/mapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChangeGeoLatLng" />
+
+</android.support.constraint.ConstraintLayout>

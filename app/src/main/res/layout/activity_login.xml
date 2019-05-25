@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/bg_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/horizontalMargin"
+        android:paddingEnd="@dimen/horizontalMargin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/standardMargin">
+
+            <ImageView
+                android:layout_width="107dp"
+                android:layout_height="34dp"
+                android:layout_marginBottom="@dimen/smallMargin"
+                android:src="@drawable/inone_logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallMargin"
+                android:layout_marginBottom="48dp"
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/din_pro_cond_bd"
+                android:lineSpacingExtra="2sp"
+                android:gravity="center_horizontal"
+                android:text="@string/authTitle"
+                tools:ignore="UnusedAttribute" />
+
+            <android.support.v7.widget.AppCompatEditText
+                style="@style/InputStyle"
+                android:id="@+id/etLogin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="@dimen/standardMargin"
+                android:inputType="text"
+                android:hint="@string/enter_login" />
+
+            <android.support.v7.widget.AppCompatEditText
+                style="@style/InputStyle"
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="@dimen/standardMargin"
+                android:inputType="textPassword"
+                android:hint="@string/enter_password" />
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="#da4040"
+                android:lineSpacingExtra="5sp"
+                android:gravity="center_horizontal"
+                android:visibility="invisible"
+                android:text="@string/incorrect_login"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="48dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/InactiveButtonStyle"
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/login"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/standardMargin"
+                android:paddingBottom="@dimen/standardMargin">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#757575"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/tvOr"/>
+
+                <TextView
+                    android:id="@+id/tvOr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/standardMargin"
+                    android:layout_marginEnd="@dimen/standardMargin"
+                    android:textSize="11sp"
+                    android:textColor="#757575"
+                    android:layout_centerInParent="true"
+                    android:text="@string/or" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#757575"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/tvOr"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/InactiveButtonStyle"
+                android:id="@+id/btnLoginLdap"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/loginIdap"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

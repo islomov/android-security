@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:ignore="SmallSp, RelativeOverlap, UnknownIdInLayout"
+    tools:context="ru.security.live.presentation.view.ui.activity.EventActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@id/buttonContainer">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/tvSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/standardMargin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tvSourceTitle"
+                    android:textAppearance="@style/InfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/source" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivArrow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_down"
+                    android:layout_alignTop="@+id/tvSourceTitle"
+                    android:layout_alignParentEnd="true"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tvSourceData"
+                    android:textAppearance="@style/EventDataTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSourceTitle"
+                    android:layout_marginTop="@dimen/standardMargin"
+                    android:visibility="visible"
+                    tools:text="Cabinet 124 4brje"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dividerColor"
+                android:layout_marginStart="@dimen/standardMargin"
+                app:layout_constraintTop_toBottomOf="@+id/tvSource"/>
+
+            <RelativeLayout
+                android:id="@+id/tvLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/standardMargin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider1">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tvLocationTitle"
+                    android:textAppearance="@style/InfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivArrow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_down"
+                    android:layout_alignTop="@+id/tvLocationTitle"
+                    android:layout_alignParentEnd="true"/>
+
+
+                <LinearLayout
+                    android:id="@+id/locationContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/tvLocationTitle"
+                    android:layout_marginTop="@dimen/standardMargin">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvLocationData"
+                        android:textAppearance="@style/EventDataTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Cabinet 124 4brje"/>
+
+                    <org.osmdroid.views.MapView
+                        android:id="@+id/mapView"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="@dimen/standardMargin"
+                        android:background="@color/white"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dividerColor"
+                android:layout_marginStart="@dimen/standardMargin"
+                app:layout_constraintTop_toBottomOf="@+id/tvLocation"/>
+
+            <RelativeLayout
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/standardMargin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tvDateTitle"
+                    android:textAppearance="@style/InfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivArrow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_down"
+                    android:layout_alignTop="@+id/tvDateTitle"
+                    android:layout_alignParentEnd="true"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tvDateData"
+                    android:textAppearance="@style/EventDataTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDateTitle"
+                    android:layout_marginTop="@dimen/standardMargin"
+                    android:visibility="visible"
+                    tools:text="Cabinet 124 4brje"/>
+
+                <android.support.v7.widget.AppCompatButton
+                    style="@style/ActiveButtonStyle"
+                    android:id="@+id/btnArchive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_below="@+id/ivArrow3"
+                    android:layout_alignParentEnd="true"
+                    android:paddingStart="@dimen/smallMargin"
+                    android:paddingEnd="@dimen/smallMargin"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    android:text="@string/watchArchive"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dividerColor"
+                android:layout_marginStart="@dimen/standardMargin"
+                app:layout_constraintTop_toBottomOf="@+id/tvDate"/>
+
+            <RelativeLayout
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/standardMargin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider3">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tvMessageTitle"
+                    android:textAppearance="@style/InfoTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/message" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/ivArrow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_down"
+                    android:layout_alignTop="@+id/tvMessageTitle"
+                    android:layout_alignParentEnd="true"/>
+
+                <LinearLayout
+                    android:id="@+id/messageDataContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvMessageTitle"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvMessageData"
+                        android:textAppearance="@style/EventDataTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standardMargin"
+                        android:visibility="visible"
+                        tools:text="Cabinet 124 4brje"/>
+
+                    <include layout="@layout/grn_data_layout"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvImages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/standardMargin"
+                        android:clipToPadding="false"/>
+
+                    <include layout="@layout/money_table"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dividerColor"
+                android:layout_marginStart="@dimen/standardMargin"
+                app:layout_constraintTop_toBottomOf="@+id/tvMessage"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standardMargin"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        android:layout_alignParentBottom="true">
+
+        <android.support.v7.widget.AppCompatButton
+            style="@style/ActiveButtonStyle"
+            android:id="@+id/btnBroadcast"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/standardMargin"
+            android:visibility="gone"
+            android:text="@string/broadcast"/>
+
+        <android.support.v7.widget.AppCompatButton
+            style="@style/ActiveButtonStyle"
+            android:id="@+id/btnMap"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="@string/showOnMap"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

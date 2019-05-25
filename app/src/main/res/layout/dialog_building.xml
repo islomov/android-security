@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_background"
+        android:layout_margin="@dimen/mediumMargin"
+        android:paddingStart="@dimen/mediumMargin"
+        android:paddingEnd="@dimen/mediumMargin"
+        android:paddingTop="@dimen/standardMargin"
+        android:paddingBottom="@dimen/standardMargin">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/smallMargin"
+            android:textAppearance="@style/InfoTextStyle"
+            android:fontFamily="@font/proxnova_sbd"
+            tools:text="Business center"/>
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/smallMargin"
+            android:textAppearance="@style/EventDataTextStyle"
+            tools:text="Latitude xxx Longitude yyy"/>
+
+        <TextView
+            android:id="@+id/tvPlacement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/smallMargin"
+            android:textAppearance="@style/EventDataTextStyle"
+            tools:text="Placement xxx"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standardMargin"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/ActiveButtonStyle"
+                android:id="@+id/btnPlan"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/standardMargin"
+                android:text="@string/toObjectPlan"/>
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/ActiveButtonStyle"
+                android:id="@+id/btnEvents"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="@string/toEventList"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

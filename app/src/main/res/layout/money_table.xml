@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutTable"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:textAppearance="@style/InfoTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/denomination" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:textAppearance="@style/InfoTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/amount" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:textAppearance="@style/InfoTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/sum" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvDenomination"
+            android:textAppearance="@style/EventDataTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lineSpacingExtra="@dimen/smallMargin"
+            tools:text="10\n20\n30\n40\n50\n100" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvAmount"
+            android:textAppearance="@style/EventDataTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lineSpacingExtra="@dimen/smallMargin"
+            tools:text="0\n5\n10\n3\n5\n2" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvTotal"
+            android:textAppearance="@style/EventDataTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/smallMargin"
+            tools:text="0\n100\n300\n200\n200\n120" />
+
+    </LinearLayout>
+
+</LinearLayout>

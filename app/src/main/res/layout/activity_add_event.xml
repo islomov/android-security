@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#11161a"
+    android:orientation="vertical"
+    tools:context=".presentation.view.ui.activity.AddEventActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvAddEventType"
+                style="@style/tvAddEventStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/event_type"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Spinner
+                android:id="@+id/spAddEventType"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:minHeight="32dp"
+                android:background="@drawable/edit_text_background2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddEventType" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvAddEventShortInfo"
+                style="@style/tvAddEventStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/short_info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spAddEventType" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/etAddEventShortInfo"
+                style="@style/etAddEventStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_background2"
+                android:hint="@string/enter_short_description"
+                android:minHeight="32dp"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddEventShortInfo" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textView2"
+                style="@style/tvAddEventStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/brief_event"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etAddEventShortInfo" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/etDescription"
+                style="@style/etAddEventStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_background2"
+                android:gravity="top"
+                android:hint="@string/enter_event_brief"
+                android:lines="5"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvAddEventCurrentGeo"
+                style="@style/tvAddEventStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/geo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvDevice"
+                style="@style/tvAddEventStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/event_device"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddEventCurrentGeo" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/etDevice"
+                style="@style/etAddEventStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_text_background2"
+                android:hint="@string/enter_device"
+                android:minHeight="32dp"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDevice" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/ivChooseDevice"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/icon_edit"
+                app:layout_constraintEnd_toEndOf="@id/etDevice"
+                app:layout_constraintTop_toTopOf="@+id/etDevice" />
+
+            <LinearLayout
+                android:id="@+id/llAddEventBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etDevice">
+
+                <CheckedTextView
+                    android:id="@+id/ctv3"
+                    style="@style/btnAddEventStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:text="@string/event_place"
+                    android:maxLines="1"
+                    android:ellipsize="end"/>
+
+                <CheckedTextView
+                    android:id="@+id/ctv2"
+                    style="@style/btnAddEventStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:text="@string/at_map" />
+
+                <CheckedTextView
+                    style="@style/btnAddEventStyle"
+                    android:id="@+id/ctv1"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:text="@string/enter_ruchnyy" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/etLocation"
+                style="@style/etAddEventStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_background2"
+                android:gravity="top"
+                android:lines="3"
+                android:minHeight="56dp"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAddEventBtn" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/ivAddEventGeoChooser"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/icon_edit"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/etLocation"
+                app:layout_constraintTop_toTopOf="@+id/etLocation" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnCamera"
+                style="@style/addEventBtn"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="0sp"
+                android:text="Камера"
+                app:layout_constraintEnd_toStartOf="@+id/btnGallery"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/etLocation" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btnGallery"
+                style="@style/addEventBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:minWidth="128dp"
+                android:text="@string/gallery"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnCamera"
+                app:layout_constraintTop_toBottomOf="@id/etLocation" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvImages"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnCreate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnCamera" />
+
+            <android.support.v7.widget.AppCompatButton
+                style="@style/ActiveButtonStyle"
+                android:id="@+id/btnCreate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/createEvent"
+                android:textSize="12sp"
+                android:layout_margin="32dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvImages" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

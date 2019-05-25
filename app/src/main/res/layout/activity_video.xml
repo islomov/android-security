@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="-3sp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/orange"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/cvVideo"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="Кабинет 435" />
+
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/cvVideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="1dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+
+            <TextureView
+                android:id="@+id/video"
+                android:layout_width="match_parent"
+                android:layout_height="208dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/btnControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/button_pause"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvTimeout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/standardMargin"
+                android:layout_marginEnd="@dimen/standardMargin"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/containerFullscreen"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_gravity="bottom"
+                android:background="@color/transparentPlayer"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivFullscreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/button_full_ing" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/videoPlaceHolder"
+                android:layout_width="match_parent"
+                android:layout_height="208dp"
+                android:visibility="gone"
+                android:background="@drawable/video_placeholder_background" />
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/toolbarColor"
+        app:cardCornerRadius="12dp"
+        app:contentPadding="24dp"
+        app:layout_constraintBottom_toBottomOf="@id/cvVideo"
+        app:layout_constraintEnd_toEndOf="@id/cvVideo"
+        app:layout_constraintStart_toStartOf="@id/cvVideo"
+        app:layout_constraintTop_toTopOf="@id/cvVideo">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvVideos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standardMargin"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="@dimen/standardMargin"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/cvVideo" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/dark_grey_two"
+        android:gravity="center_vertical"
+        android:paddingStart="16sp"
+        android:paddingEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvArchive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:clickable="false"
+            android:drawableTop="@drawable/icon_archive"
+            android:enabled="false"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="1sp"
+            android:text="Архив"
+            android:textColor="#ffffff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tvUserEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:clickable="false"
+            android:drawableTop="@drawable/icon_users"
+            android:enabled="false"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="1sp"
+            android:text="Польз. событие"
+            android:textColor="#ffffff"
+            android:textSize="11sp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

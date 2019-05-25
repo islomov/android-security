@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:background="#111518"
+    android:background="@color/almost_black"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="9sp"
+        android:textColor="#a4b0bb"
+        android:layout_marginBottom="6dp"
+        android:lineSpacingExtra="9sp"
+        android:gravity="center_horizontal"
+        android:visibility="invisible"
+        tools:text="00:00"
+        tools:ignore="SmallSp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:visibility="invisible"
+        android:gravity="center_vertical">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/icon_scale_2"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/icon_scale_1"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/icon_scale_1"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/icon_scale_1"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/icon_scale_1"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/icon_scale_1"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/icon_scale_1"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/icon_scale_1"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/icon_scale_1"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/icon_scale_1"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/icon_scale_1"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/icon_scale_1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="9sp"
+        android:textColor="#a4b0bb"
+        android:layout_marginBottom="6dp"
+        android:lineSpacingExtra="9sp"
+        android:gravity="center_horizontal"
+        android:visibility="invisible"
+        tools:text="23 апреля"
+        tools:ignore="SmallSp" />
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="horizontalMargin">32dp</dimen>
+    <dimen name="circleSize">72dp</dimen>
+    <dimen name="smallMargin">8dp</dimen>
+    <dimen name="inputPadding">14dp</dimen>
+    <dimen name="standardMargin">16dp</dimen>
+    <dimen name="mediumMargin">12dp</dimen>
+</resources>

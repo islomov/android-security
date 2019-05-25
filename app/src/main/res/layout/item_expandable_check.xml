@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/mainBlack">
+
+    <RelativeLayout
+        android:layout_marginStart="@dimen/standardMargin"
+        android:layout_marginTop="@dimen/standardMargin"
+        android:layout_marginBottom="@dimen/standardMargin"
+        android:layout_marginEnd="@dimen/smallMargin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/ivArrow">
+
+            <ImageView
+                android:id="@+id/ivCheck"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="@dimen/smallMargin"
+                android:padding="12dp"
+                android:src="@drawable/icon_checkbox"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/InfoTextStyle"
+                android:text="@string/tillNow"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_next"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/standardMargin"
+        android:background="@color/background"/>
+
+</LinearLayout>

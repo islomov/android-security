@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutGrn"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:textAppearance="@style/InfoTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/smallMargin"
+        android:text="@string/number" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tvNumber"
+        android:textAppearance="@style/EventDataTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smallMargin"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:lineSpacingExtra="@dimen/smallMargin"
+        tools:text="H60M782" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:textAppearance="@style/InfoTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/smallMargin"
+        android:text="@string/speed" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tvSpeed"
+        android:textAppearance="@style/EventDataTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smallMargin"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:lineSpacingExtra="@dimen/smallMargin"
+        tools:text="H60M782" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:textAppearance="@style/InfoTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/smallMargin"
+        android:text="@string/direction" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tvDirection"
+        android:textAppearance="@style/EventDataTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smallMargin"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:lineSpacingExtra="@dimen/smallMargin"
+        tools:text="H60M782" />
+
+</LinearLayout>

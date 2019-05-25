@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/mainBlack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standardMargin"
+            android:textAppearance="@style/InfoTextStyle"
+            android:text="@string/filterDate"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/standardMargin"
+            android:background="@color/dividerColor"/>
+
+        <LinearLayout
+            android:id="@+id/containerFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:layout_margin="@dimen/standardMargin"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/standardMargin"
+                android:textAppearance="@style/InfoTextStyle"
+                android:text="@string/from"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvFromDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/standardMargin"
+                android:textAppearance="@style/EventDataTextStyle"
+                android:textColor="@color/white"
+                android:background="@drawable/frame_data"
+                tools:text="12.04.2018"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvFromTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="@style/EventDataTextStyle"
+                android:textColor="@color/white"
+                android:background="@drawable/frame_time"
+                tools:text="12:04"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cbNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standardMargin"
+            android:paddingStart="@dimen/smallMargin"
+            android:paddingEnd="@dimen/smallMargin"
+            android:text="@string/tillNow"
+            android:textAppearance="@style/InfoTextStyle"
+            android:textColor="@color/white"
+            android:button="@drawable/checkbox_selector" />
+
+        <LinearLayout
+            android:id="@+id/containerTill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:layout_margin="@dimen/standardMargin"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/smallMargin"
+                android:textAppearance="@style/InfoTextStyle"
+                android:text="@string/till"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvTillDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/standardMargin"
+                android:minEms="2"
+                android:textAppearance="@style/EventDataTextStyle"
+                android:textColor="@color/white"
+                android:background="@drawable/frame_data"
+                tools:text="12.04.2018"/>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvTillTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="@style/EventDataTextStyle"
+                android:textColor="@color/white"
+                android:background="@drawable/frame_time"
+                tools:text="12:04"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standardMargin"
+            android:textAppearance="@style/InfoTextStyle"
+            android:text="@string/filterSource"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/standardMargin"
+            android:background="@color/dividerColor"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvSources"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/standardMargin"
+            android:textAppearance="@style/InfoTextStyle"
+            android:text="@string/filterEventType"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/standardMargin"
+            android:background="@color/dividerColor"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvEventTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/standardMargin"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

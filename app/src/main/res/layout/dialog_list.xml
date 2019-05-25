@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_background"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/mediumMargin"
+        android:paddingTop="@dimen/standardMargin"
+        android:paddingBottom="@dimen/standardMargin">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/smallMargin"
+            android:paddingStart="@dimen/mediumMargin"
+            android:paddingEnd="@dimen/mediumMargin"
+            android:textAppearance="@style/InfoTextStyle"
+            android:fontFamily="@font/proxnova_sbd"
+            android:text="@string/equipmentList"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvPoints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

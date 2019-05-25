@@ -1,0 +1,120 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColorPrimary">@color/enteredTextColor</item>
+        <item name="android:textColorSecondary">@color/lightGray</item>
+    </style>
+
+    <style name="MainTheme.Toolbar"/>
+
+    <style name="MainTheme.Toolbar.Title">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@color/background_list_item</item>
+        <item name="android:fontFamily">@font/din_pro_cond_bd</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:lineSpacingExtra">-1sp</item>
+    </style>
+
+    <style name="DeviceListTheme" parent="MainTheme">
+        <item name="colorAccent">@color/searchText</item>
+        <item name="android:textColorPrimary">@color/enteredTextColor</item>
+        <item name="android:textColorSecondary">@color/lightGray</item>
+        <item name="android:background">@color/background</item>
+    </style>
+
+    <style name="tvAddEventStyle">
+        <item name="android:lineSpacingExtra">-2sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/proxnova_rg</item>
+    </style>
+
+    <style name="MainTheme.Button"/>
+
+    <style name="etAddEventStyle">
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/proxnova_rg</item>
+    </style>
+
+    <style name="btnAddEventStyle">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:background">@drawable/add_event_geo_btn_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">gravity</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/proxnova_sbd</item>
+    </style>
+
+    <style name="MainTheme.Button.Orange">
+        <item name="android:background">@drawable/orange_button_background</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lineSpacingExtra">-1sp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+    </style>
+
+    <style name="addEventBtn">
+        <item name="android:background">@drawable/button_background_orange_border</item>
+        <item name="android:textColor">#ec960e</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/proxnova_sbd</item>
+    </style>
+
+    <style name="ToolbarTextView">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingExtra">-4sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:fontFamily">@font/din_pro_cond_bd</item>
+    </style>
+
+    <style name="InputStyle">
+        <item name="android:paddingTop">@dimen/inputPadding</item>
+        <item name="android:paddingBottom">@dimen/inputPadding</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/input_shape</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="InactiveButtonStyle">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/button_inactive</item>
+        <item name="android:textColor">@color/inactiveColor</item>
+    </style>
+
+    <style name="ActiveButtonStyle">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/button_active</item>
+        <item name="android:textColor">@color/activeColor</item>
+    </style>
+
+    <style name="InfoTextStyle">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">-2sp</item>
+        <item name="android:fontFamily">@font/proxnova_rg</item>
+    </style>
+
+    <style name="EventDataTextStyle">
+        <item name="android:textColor">#a4b0bb</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineSpacingExtra">-2sp</item>
+        <item name="android:fontFamily">@font/proxnova_rg</item>
+    </style>
+
+</resources>

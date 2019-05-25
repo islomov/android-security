@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/itemLayout">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="124dp"
+            android:layout_height="88dp"
+            android:scaleType="centerCrop"
+            android:src="@color/charcoal_grey"/>
+
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textSize="11sp"
+            android:textColor="#ffffff"
+            android:lineSpacingExtra="1sp"
+            android:text="@string/noConnection"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="124dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textSize="11sp"
+        android:textColor="#ffffff"
+        android:lineSpacingExtra="1sp"
+        android:text="Кабинет 435 9 14 Аквариум"
+        android:layout_below="@+id/cvImage"/>
+</RelativeLayout>

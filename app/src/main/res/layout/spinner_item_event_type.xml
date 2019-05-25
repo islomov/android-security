@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:layout_marginEnd="12dp"
+    android:layout_marginStart="12dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlSymmetry"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        style="@style/tvAddEventStyle"
+        android:id="@+id/tvSpinnerTypeText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#2e353b"
+        android:gravity="start|center_vertical"
+        android:paddingStart="10dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:singleLine="true"/>
+</FrameLayout>
